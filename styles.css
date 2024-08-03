@@ -61,8 +61,13 @@ body {
     
     
 }
-#place::placeholder {
-    color:#0A3871;
+.ventana_subventana_textarea2::placeholder {
+    color:#000000;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    font-family: var(--fuente-inter);
+    
     }
 .ventana_textarea { 
     text-decoration: none;
@@ -198,9 +203,19 @@ body {
     font-weight: 400;
     border: none;
     font-family: var(--fuente-inter);
-    width: 90%;
-    height: 60vh;
-    margin-top: 18px;
+    width: 99%;
+    height: 10vh;
+    margin-top: 5%;
+    
+    
+}
+.ocultar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ventana_subventana_textarea2{
+    display: none;
 }
 
 
