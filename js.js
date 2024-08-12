@@ -3,14 +3,19 @@ const mensaje = document.getElementById("desencritarTexto");
 let copiar = document.getElementById('botoncopiar');
 let parrafo = document.getElementById ('TextoParrafo');
 let titulo = document.getElementById ('textoTitulo');
+let mensajecopiar = document.getElementById ('mensajecopiado')
 // La letra "e" es convertida para "enter"
 // La letra "i" es convertida para "imes"
 // La letra "a" es convertida para "ai"
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
 
-copiar.style.display = 'none';
 
+// STYLOS
+copiar.style.display = 'none';
+mensajecopiar.style.display = 'none';
+
+// FUNCION BOTONES
 
 function btnEncriptar() {
     const textoEncriptado = encriptar(textArea.value)
@@ -28,6 +33,47 @@ function btndesencriptar() {
     textArea.value = '';
 }
 
+// FUNCION COPIAR
+
+function btncopiar() {
+    // Obtener el elemento que contiene el texto
+    const texto = document.getElementById('desencritarTexto');
+
+    // Seleccionar el contenido del campo de texto
+    texto.select();
+    texto.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+    try {
+        // Copiar el texto al portapapeles
+        document.execCommand('copy');
+        // Mostrar un mensaje de confirmación
+        document.getElementById('mensajecopiado').textContent = 'Texto copiado';
+        mensajecopiar.style.display = '';
+    } catch (err) {
+        // Mostrar un mensaje de error si ocurre algún problema
+        document.getElementById('mensajecopiado').textContent = 'Error al copiar el texto';
+    }
+}
+
+// FUNCION PEGAR 
+
+async function btnpegar() {
+    try {
+        // Leer el contenido del portapapeles
+        const texto = await navigator.clipboard.readText();
+        mensajecopiar.style.display = 'none';
+        // Pegar el contenido en el campo de texto
+        document.getElementById('tex_encriptar').value = texto;
+        
+        // Mostrar un mensaje de confirmación
+        document.getElementById('mensaje').textContent = 'Texto pegado desde el portapapeles';
+    } catch (err) {
+        // Mostrar un mensaje de error si ocurre algún problema
+        document.getElementById('mensaje').textContent = 'Error al pegar el texto';
+    }
+}
+
+// ENCRIPTAR Y DESENCRIPTAR
 
 function encriptar (stringEncriptada){
 let matrizCodigo = [["e", "enter"], ["i","imes"], ["a", "ai"], ["o","ober"], ["u","ufat"]];
@@ -52,3 +98,5 @@ function desencriptar (stringDesencriptada){
     }
     return stringDesencriptada
     }
+
+

@@ -11,14 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div class="caja_master">
+        <button id="reset" onclick="reset()"> reset</button>
         <div class="ventana_master">
             <div class="ventana_master_imagen">
                 <img src="Imagenes/Logo.png" alt="iconoalura"/>
             </div>
             <div class="ventana_master_texto_botones">
-                <div>
-                    <textarea class="ventana_textarea" id="tex_encriptar" cols="30" rows="10" placeholder="ingrese un texto aquí..."></textarea>
+                <div class="textareaypegar">
+                <textarea class="ventana_textarea" id="tex_encriptar" cols="30" rows="10" placeholder="ingrese un texto aquí..."></textarea>
+                <button class="botonpegar" id="pegar" onclick="btnpegar()">Pegar</button>
                 </div>
                 <div class="ventana_botones_principal">
                     <div class="ventana_parrafo_botones">
@@ -35,7 +38,8 @@
                 <h3 id="textoTitulo">Ningún mensaje fue encontrado</h3>
                 <p class="ventana_subventana_p" id="TextoParrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
                 <div class="tex_copiar">
-                    <button id="botoncopiar" class="ventana_subventana_copiar">Copiar</button>
+                    <button id="botoncopiar" class="ventana_subventana_copiar" onclick="btncopiar()">Copiar</button>
+                    <p id="mensajecopiado"></p>
                 </div>
             </div>
         </div>
