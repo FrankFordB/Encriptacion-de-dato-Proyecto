@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 
 /* VENTANA GENERAL */
@@ -6,18 +6,18 @@
     --fuente-inter:"Inter", sans-serif;
 
 }
-*{
+*   {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
-    
-}
-body {
+    font-family: var(--fuente-inter);
+    }
+
+body{
     background: #f3f5fc28;
 }
 
-.caja_master{
+.caja_master {
     display: flex;
     justify-content: center;
     background: #f3f5fc9c;
@@ -53,23 +53,26 @@ body {
     width: 1px;
     margin-left:60px ;
     }
+
 .ventana_botones_principal {
     display: flex;
     flex-direction: column;
-    
-    
-    
-    
-}
+    }
+
 .ventana_subventana_textarea2::placeholder {
     color:#000000;
     font-size: 24px;
     font-weight: 700;
     text-align: center;
     font-family: var(--fuente-inter);
-    
     }
+
+.ventana_subventana_textarea2:focus {
+    outline: none;
+    }
+
 .ventana_textarea { 
+    text-transform: lowercase;
     text-decoration: none;
     border: none;
     width: 95%;
@@ -83,6 +86,13 @@ body {
     text-align: left;
     color: #0A3871;
     text-align: left;
+}
+.ventana_textarea::placeholder{
+    color: #0A3871;
+}
+.ventana_textarea:focus {
+    outline: none;
+    font-family: "Inter", sans-serif;
 }
 
 .ventana_textarea2 {
@@ -104,8 +114,8 @@ body {
 .ventana_parrafo_botones{
     display: flex;
     
-    
 }
+
 .ventana_botones_parrafo_letra {
     font-size: 12px;
     color: #495057;
@@ -120,7 +130,6 @@ body {
 }
 
 .ventana_botones{
-    
     background-color: #0A3871;
     border-radius: 24px;
     height: 67px;
@@ -148,39 +157,50 @@ body {
     align-content: center;
     cursor: pointer;
 }
+.tex_copiar{
+    display: flex;
+}
 .ventana_subventana_copiar{
+    
     background-color: #f3f6ff;
     border: 0.1rem solid #0A3871;
     color: #0A3871;
     border-radius: 24px;
     font-size: 16px;
-    height: 67px;
-    width: 85%;
-    margin-bottom: 46px;
+    height: 69px;
+    width: 360px;
+    margin-bottom: 38px;
     font-weight: 400;
-    margin-top: 16px;
     text-align: center;
     font-family: var(--fuente-inter);
     align-content: center;
     cursor: pointer;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .ventana_subventana {
-    width: 25%;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-self: center;
-    justify-content: center;
+    align-content: center;
+    justify-content: space-between;
     margin: 1% 1%;
-    
+    width: 400px;
+    height: 90vh;
     border-radius: 32px;
     background-color: #ffffff;
     box-shadow: 0px 24px 32px -8px #00000014;
     color: #0A3871;
     
 
+}
+.ventana_subventana h3 {
+    color: #343A40;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var()
 }
 .ventana_subventana2 {
     width: 25%;
@@ -198,24 +218,19 @@ body {
     color: #0A3871;
 }
 .ventana_subventana_textarea2{
+    background-image: url("Imagenes/Muñeco.png");
+    background-repeat: no-repeat;
+    background-position: center;
     color: #495057;
     font-size: 24px;
     font-weight: 400;
     border: none;
     font-family: var(--fuente-inter);
     width: 99%;
-    height: 10vh;
+    height: 70vh;
     margin-top: 5%;
-    
-    
-}
-.ocultar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#ventana_subventana_textarea2{
-    display: none;
+    border-radius: 10px;
+    text-transform: lowercase;
 }
 
 
@@ -287,8 +302,8 @@ body {
         box-shadow: none;
     }
     .ventana_subventana {
-        width: 85%;
-        height: 30vh;
+        width: 95%;
+        height: 40vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -298,6 +313,7 @@ body {
         background-color: #ffffff;
         box-shadow: 0px 24px 32px -8px #00000014;
         color: #0A3871;
+        margin-bottom: 20px;
         }
 
     .ventana_textarea { 
@@ -319,11 +335,15 @@ body {
     .ventana_subventana_lupa {
         display: none;
     }
+    .ventana_subventana_textarea2{
+        background-image: none;
+    }
+
     .footer{
         background-color: #0c418177;
         padding: 0.50%;
         width: 100%;
-        margin-top: 2%;
+        margin-top: 3%;
         
     }
 
@@ -332,7 +352,6 @@ body {
 @media (max-width: 400px) {
     .ventana_botones_master{
         display: flex;
-        
         gap: 15px;
         align-content: center;
         flex-direction: column;
@@ -350,4 +369,9 @@ body {
     .ventana_botones1 { 
         width: auto;
         }
+.ventana_subventana_copiar{
+    width: 290px ;
+    margin-left: 1%;
+    margin-right: 1%;
+}
     }

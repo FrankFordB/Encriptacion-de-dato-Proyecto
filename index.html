@@ -4,61 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptacion de datos</title>
-    <link rel="stylesheet" href="styles.css" >
-    <link rel="icon" href="Imagenes\Logo.png">
-    <script src="js.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Imagenes/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<div class="caja_master">
-    <div class="ventana_master">
-        <div class="ventana_master_imagen">
-        <img src="Imagenes\Logo.png" alt="iconoalura"/>
-    </div>
-        <div class="ventana_master_texto_botones">
-            <div>
-                <textarea class="ventana_textarea" id="tex_encriptar" placeholder="Escriba un texto aquí..."></textarea>
-            
+    <div class="caja_master">
+        <div class="ventana_master">
+            <div class="ventana_master_imagen">
+                <img src="Imagenes/Logo.png" alt="iconoalura"/>
             </div>
-            
-            <div class="ventana_botones_principal">
-            <div class="ventana_parrafo_botones">
-            <p class="ventana_botones_parrafo_letra"> 👁️‍🗨️ Solo letras minúsculas y sin acentos.</p>
+            <div class="ventana_master_texto_botones">
+                <div>
+                    <textarea class="ventana_textarea" id="tex_encriptar" cols="30" rows="10" placeholder="ingrese un texto aquí..."></textarea>
                 </div>
-
-            <div class="ventana_botones_master" >
-            <button class="ventana_botones" id="boton_encriptar" onclick="Encriptar()">Encriptar</button> 
-            <button class="ventana_botones1" id="boton_desencriptar" onclick="Desencriptar()"> Desencriptar</button>
+                <div class="ventana_botones_principal">
+                    <div class="ventana_parrafo_botones">
+                        <p class="ventana_botones_parrafo_letra">👁️‍🗨️ Solo letras minúsculas y sin acentos.</p>
+                    </div>
+                    <div class="ventana_botones_master">
+                        <button class="ventana_botones" id="btnEncriptar" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="ventana_botones1" id="boton_desencriptar" onclick="btndesencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ventana_subventana">
+                <textarea class="ventana_subventana_textarea2" id="desencritarTexto" cols="20" rows="10" readonly></textarea>
+                <h3 id="textoTitulo">Ningún mensaje fue encontrado</h3>
+                <p class="ventana_subventana_p" id="TextoParrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <div class="tex_copiar">
+                    <button id="botoncopiar" class="ventana_subventana_copiar">Copiar</button>
                 </div>
             </div>
         </div>
-        <div class="ventana_subventana"> 
-    <div class="ocultar" id="imagn_borrar">
-        <img class="ventana_subventana_lupa"  id="imagen_borrar" src="Imagenes\Muñeco.png"/>
-        
-        <textarea class="ventana_subventana_textarea2" placeholder="Ningún mensaje fue encontrado" ></textarea>
-        <div id="imagen_borrar">
-        <p class="ventana_subventana_p" >Ingresa el texto que desees encriptar o desencriptar.</p>
     </div>
-        
-        <div id='tex_copiar' >
-        
-            <button class="ventana_subventana_copiar">Copiar</button>
-        </div>
-    </div>
-    
-    
-    </div>
-        
-    </div>
-</div>
-   
-
-<footer>
+    <footer>
         <div class="footer">
-        <a href="https://www.linkedin.com/in/franco-burgoa-4a338514b" target="_blank" > Desarrollado por Franco Burgoa</a>
-    </div>
+            <a href="https://www.linkedin.com/in/franco-burgoa-4a338514b" target="_blank">Desarrollado por Franco Burgoa</a>
+        </div>
     </footer>
-    
+    <script src="js.js"></script>
 </body>
+
 </html>
