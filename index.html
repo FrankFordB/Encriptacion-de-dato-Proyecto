@@ -9,19 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     
     <div class="caja_master">
-        <button id="reset" onclick="reset()"> reset</button>
+        
+        <p id="mensaje1"></p>
         <div class="ventana_master">
+            
             <div class="ventana_master_imagen">
                 <img src="Imagenes/Logo.png" alt="iconoalura"/>
+                <button class="boton_reset" id="reset" onclick="reset()"> Resetear</button>
             </div>
             <div class="ventana_master_texto_botones">
                 <div class="textareaypegar">
                 <textarea class="ventana_textarea" id="tex_encriptar" cols="30" rows="10" placeholder="ingrese un texto aquí..."></textarea>
-                <button class="botonpegar" id="pegar" onclick="btnpegar()">Pegar</button>
+                <button class="botonpegar" id="pegar" onclick="btnpegar()"><i class="fa-regular fa-paste"></i></button>
                 </div>
                 <div class="ventana_botones_principal">
                     <div class="ventana_parrafo_botones">

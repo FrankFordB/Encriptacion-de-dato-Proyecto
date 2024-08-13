@@ -16,21 +16,33 @@ copiar.style.display = 'none';
 mensajecopiar.style.display = 'none';
 
 // FUNCION BOTONES
+function reset() {
+    const textArea = document.getElementById("tex_encriptar");
+    textArea.value = '';
+    const mensaje = document.getElementById("desencritarTexto");
+    mensaje.value = '';
+    mensaje.style.backgroundImage = '';
+    parrafo.style.display = '';
+    titulo.style.display = '';
+    copiar.style.display = 'none';
+}
 
 function btnEncriptar() {
     const textoEncriptado = encriptar(textArea.value)
     mensaje.value = textoEncriptado
     textArea.value = '';
-    mensaje.style.backgroundImage = 'none'
+    mensaje.style.backgroundImage = 'none';
     copiar.style.display = '';
-    parrafo.style.display = 'none'
+    parrafo.style.display = 'none';
     titulo.style.display = 'none';
+    mensajecopiar.style.display = 'none';
 }
 
 function btndesencriptar() {
     const textoEncriptado = desencriptar(textArea.value)
-    mensaje.value = textoEncriptado
+    mensaje.value = textoEncriptado;
     textArea.value = '';
+    mensajecopiar.style.display = 'none';
 }
 
 // FUNCION COPIAR
