@@ -19,14 +19,19 @@
         <div class="ventana_master">
             
             <div class="ventana_master_imagen">
-                <img src="Imagenes/Logo.png" alt="iconoalura"/>
+                <a href="https://www.aluracursos.com/" target="_blank"><img src="Imagenes/Logo.png" alt="iconoalura"/></a>
                 <button class="boton_reset" id="reset" onclick="reset()"> Resetear</button>
             </div>
             <div class="ventana_master_texto_botones">
                 <div class="textareaypegar">
                 <textarea class="ventana_textarea" id="tex_encriptar" cols="30" rows="10" placeholder="ingrese un texto aquí..."></textarea>
-                <button class="botonpegar" id="pegar" onclick="btnpegar()"><i class="fa-regular fa-paste"></i></button>
+                <button class="botonpegar" title="Pegar" id="pegar" onclick="btnpegar()"><i class="fa-regular fa-paste"></i></button>
                 </div>
+            <!-- <div id="modalventana">
+                    <p id="cerrarmodal">&times;</p>
+                    <h3 id="noHayTexto">No hay Texto</h3>
+                    
+            </div> -->
                 <div class="ventana_botones_principal">
                     <div class="ventana_parrafo_botones">
                         <p class="ventana_botones_parrafo_letra">👁️‍🗨️ Solo letras minúsculas y sin acentos.</p>
@@ -44,7 +49,7 @@
                 <div class="tex_copiar">
                     <button id="botoncopiar" class="ventana_subventana_copiar" onclick="btncopiar()">Copiar</button>
                     <p id="mensajecopiado"></p>
-                </div>
+                    </div>
             </div>
         </div>
     </div>
