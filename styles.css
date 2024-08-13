@@ -399,10 +399,11 @@ background-color: #ccd5e275;
         background-color: #ffffff;
         box-shadow: 0px 24px 32px -8px #00000014;
         color: #0A3871;
-        margin-bottom: 20px;
+        margin: auto;
+        
         }
-
-    .ventana_textarea { 
+        
+        .ventana_textarea { 
         margin-top: 5%;
         width: 85%;
         }
@@ -429,7 +430,8 @@ background-color: #ccd5e275;
         background-color: #0c418177;
         padding: 0.50%;
         width: 100%;
-        margin-top: 3%;
+        margin-top: 5%;
+        
         
     }
 
@@ -447,7 +449,8 @@ background-color: #ccd5e275;
     }
 
     .ventana_textarea { 
-        width: 95%;
+        width: 85%;
+        font-size: 20px;
         }
     .ventana_botones { 
     width: auto;
@@ -455,9 +458,29 @@ background-color: #ccd5e275;
     .ventana_botones1 { 
         width: auto;
         }
+.botonpegar {
+    margin-right: 10%;
+    margin-top: 8%;
+}
 .ventana_subventana_copiar{
     width: 290px ;
     margin-left: 1%;
     margin-right: 1%;
+}
+.ventana_subventana_textarea2{
+    
+}
+
+.ventana_subventana h3{
+    text-align: center;
+    color: #000000;
+    
+}
+.ventana_subventana p{
+    text-align: center;
+    color: #000000;
+}
+.footer {
+    margin-top: 30%;
 }
     }
