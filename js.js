@@ -1,3 +1,5 @@
+// VARIABLES
+
 const textArea = document.getElementById("tex_encriptar");
 const mensaje = document.getElementById("desencritarTexto");
 let copiar = document.getElementById('botoncopiar');
@@ -14,7 +16,8 @@ let mensajecopiar = document.getElementById ('mensajecopiado');
 // La letra "u" es convertida para "ufat"
 
 
-// STYLOS
+// STYLOS INICIO
+
 copiar.style.display = 'none';
 mensajecopiar.style.display = 'none';
 textArea.focus();
@@ -37,24 +40,26 @@ textArea.focus();
 function reset() {
     const textArea = document.getElementById("tex_encriptar");
     textArea.value = '';
-    
+    textArea.focus();
     const mensaje = document.getElementById("desencritarTexto");
     mensaje.value = '';
     mensaje.style.backgroundImage = '';
     parrafo.style.display = '';
     titulo.style.display = '';
     copiar.style.display = 'none';
-    textArea.focus();
+    
     // modalVent.stylo.display = 'none';
     // cerrarmodal.style.display = 'none';
     // noHayTexto.style.display ='none';
+        // modalVent.stylo.display = 'block';
     }
     
-    modalVent.stylo.display = 'block';
+// ENCRIPTAR
+
 function btnEncriptar() {
     
     if  (textArea.value === ''){
-    
+    alert ('Escriba un mensaje, por favor.');
     // cerrarmodal.style.display = 'block';    
     // noHayTexto.style.display = 'block'    
     }
@@ -73,8 +78,15 @@ function btnEncriptar() {
     }
     
 }
+// DESENCRIPTAR
 
 function btndesencriptar() {
+    if  (textArea.value === ''){
+        alert ('Escriba un mensaje, por favor.');
+        // cerrarmodal.style.display = 'block';    
+        // noHayTexto.style.display = 'block'    
+        }
+        else {
     const textoEncriptado = desencriptar(textArea.value)
     mensaje.focus();
     mensaje.value = textoEncriptado;
@@ -82,7 +94,7 @@ function btndesencriptar() {
     copiar.style.display = '';
     parrafo.style.display = 'none';
     titulo.style.display = 'none';
-    mensaje.style.backgroundImage = 'none';
+    mensaje.style.backgroundImage = 'none';}
 }
 
 // FUNCION COPIAR
@@ -124,7 +136,8 @@ async function btnpegar() {
     }
 }
 
-// ENCRIPTAR Y DESENCRIPTAR
+// ENCRIPTAR Y DESENCRIPTAR FUNCIONES
+
 
 function encriptar (stringEncriptada){
 let matrizCodigo = [["e", "enter"], ["i","imes"], ["a", "ai"], ["o","ober"], ["u","ufat"]];
